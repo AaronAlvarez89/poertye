@@ -1,108 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your App Landing Page</title>
-  <style>
-    body, h1, p {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      line-height: 1.5;
-      color: #333;
-    }
-    .hero {
-      background: linear-gradient(135deg, #6b73ff, #000dff);
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 30px;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      color: white;
-      background: #ff5c5c;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .features {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-    .features h2 {
-      margin-bottom: 25px;
-      font-size: 2rem;
-    }
-    .features .item {
-      margin-bottom: 20px;
-    }
-    .footer {
-      background: #f8f8f8;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    @media (min-width: 600px) {
-      .features .item {
-        display: inline-block;
-        width: 45%;
-        margin: 2.5%;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Paid to Scroll!</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 420px;
+  width: 100%;
+  padding: 32px 18px 40px;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 44px;
+  margin-bottom: 16px;
+  color: #00f2ea;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.1rem;
+  background: linear-gradient(90deg, #ff007f, #00f2ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #bfbfbf;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+/* Stats */
+.stats {
+  background: #161616;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 26px;
+}
+
+.stat {
+  margin-bottom: 12px;
+}
+
+.stat:last-child {
+  margin-bottom: 0;
+}
+
+.stat h3 {
+  font-size: 1.4rem;
+  background: linear-gradient(90deg, #00f2ea, #ff007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat p {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* CTA Button */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff007f, #00f2ea);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(0, 255, 234, 0.4);
+  margin-bottom: 32px;
+}
+
+/* Steps */
+.steps {
+  background: #161616;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+}
+
+.steps h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, #00f2ea, #ff007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.step {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff007f, #00f2ea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 14px;
+}
+
+.step-content h4 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.step-content p {
+  font-size: 0.85rem;
+  color: #bfbfbf;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  margin-top: 28px;
+  border-top: 1px solid #222;
+  padding-top: 16px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+footer a {
+  color: #00f2ea;
+  text-decoration: none;
+}
+</style>
 </head>
+
 <body>
+<div class="container">
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Your App</h1>
-    <p>Discover the easiest way to get rewards and benefits instantly.</p>
-    <a class="cta-btn" href="https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtc29pIiwidSI6IjY4OTI4ZjA0ZDcxYzAzMmUyODgwMWRlZiIsInRzIjoxNzY3MTAyODY2NDE2fQ?scroll=1">
-      Get Started
-    </a>
-  </section>
+  <div class="logo">🎵</div>
 
-  <!-- Features -->
-  <section class="features">
-    <h2>Why Use This?</h2>
-    <div class="item">
-      <h3>Fast & Easy</h3>
-      <p>Get instant access to rewards with one click.</p>
-    </div>
-    <div class="item">
-      <h3>Mobile Friendly</h3>
-      <p>Optimized experience on any screen size.</p>
-    </div>
-    <div class="item">
-      <h3>No Signup Needed</h3>
-      <p>Start using the service without filling long forms.</p>
-    </div>
-    <div class="item">
-      <h3>Secure & Safe</h3>
-      <p>Your data stays private and secure.</p>
-    </div>
-  </section>
+  <h1>Get Paid to Scroll!</h1>
+  <h2>Congrats! You <span style="color:#00f2ea;">Qualify</span></h2>
 
-  <!-- Footer -->
-  <footer class="footer">
-    © 2025 Your Company Name — All Rights Reserved
+  <p>
+    Earn up to $500 per offer by testing apps, playing games,
+    & completing surveys.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>500K+</h3>
+      <p>Active Users</p>
+    </div>
+    <div class="stat">
+      <h3>$500</h3>
+      <p>Per Day</p>
+    </div>
+    <div class="stat">
+      <h3>Instant</h3>
+      <p>Payments</p>
+    </div>
+  </div>
+
+  <!-- SAME TAB CTA -->
+  <a class="btn"
+     href="https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtc29pIiwidSI6IjY4OTI4ZjA0ZDcxYzAzMmUyODgwMWRlZiIsInRzIjoxNzY3MTAyODY2NDE2fQ?scroll=1">
+     Click Here to Sign Up
+  </a>
+
+  <div class="steps">
+    <h3>How to Get Started</h3>
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Sign Up</h4>
+        <p>Click the button above and get instant access.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Complete Tasks</h4>
+        <p>Play games & complete simple offers.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h4>Scroll & Earn</h4>
+        <p>Scroll content you already love.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h4>Get Paid</h4>
+        <p>Withdraw instantly via PayPal or gift cards.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="#">Terms</a> •
+    <a href="#">Privacy</a> •
+    <a href="#">SMS</a> •
+    <a href="#">Disclaimer</a>
   </footer>
 
+</div>
 </body>
 </html>
+
